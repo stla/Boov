@@ -1,0 +1,28 @@
+Package: Boov
+Type: Package
+Title: Boolean Operations on Volumes
+Version: 0.1.0.9000
+Authors@R: person("Stéphane", "Laurent", email = "laurent_step@outlook.fr", role = c("aut", "cre"))
+Maintainer: Stéphane Laurent <laurent_step@outlook.fr>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: GPL-3
+URL: https://github.com/stla/Boov
+BugReports: https://github.com/stla/Boov/issues
+Depends: 
+    R (>= 2.10)
+Imports: 
+    PolygonSoup,
+    gmp,
+    Rcpp (>= 1.0.9)
+Suggests: 
+    rgl
+LinkingTo: 
+    BH,
+    Rcpp,
+    RcppCGAL,
+    RcppEigen
+Encoding: UTF-8
+LazyData: true
+SystemRequirements: C++ 17, gmp, mpfr
+
