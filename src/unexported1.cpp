@@ -132,7 +132,7 @@ MeshT soup2mesh(std::vector<PointT> points,
       Message(msg2);
     }
   } else {
-    Message("The mesh is not closed.");
+    Rcpp::stop("The mesh is not closed.");
   }
   return mesh;
 }
