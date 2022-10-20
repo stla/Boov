@@ -33,16 +33,12 @@ library(Boov)
 library(rgl)
 
 # mesh one: a cube
-cube1 <- cube3d() # (from the rgl package)
-mesh1 <-
-  list(vertices = t(cube1[["vb"]][-4L, ]), faces = t(cube1[["ib"]]))
+mesh1 <- cube3d() # (from the rgl package)
 
 # mesh two: another cube
-cube2 <- translate3d( # (from the rgl package)
+mesh2 <- translate3d( # (from the rgl package)
   cube3d(), 1, 1, 0
 )
-mesh2 <-
-  list(vertices = t(cube2[["vb"]][-4L, ]), faces = t(cube2[["ib"]]))
 
 # compute the difference
 differ <- MeshesDifference(mesh1, mesh2)
@@ -50,8 +46,8 @@ differ <- MeshesDifference(mesh1, mesh2)
 # plot
 rgldiffer <- toRGL(differ)
 open3d(windowRect = c(50, 50, 562, 562))
-shade3d(cube1, color = "yellow", alpha = 0.2)
-shade3d(cube2, color = "cyan", alpha = 0.2)
+shade3d(mesh1, color = "yellow", alpha = 0.2)
+shade3d(mesh2, color = "cyan", alpha = 0.2)
 shade3d(rgldiffer, color = "red")
 plotEdges(
   vertices = differ[["vertices"]], edges = differ[["exteriorEdges"]],

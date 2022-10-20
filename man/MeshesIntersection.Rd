@@ -42,11 +42,9 @@ mesh1 <- Mesh(
 )
 
 # mesh two: a cube
-cube <- translate3d( # (from the rgl package)
+mesh2 <- translate3d( # (from the rgl package)
   cube3d(), 2, 0, 0
 )
-mesh2 <-
-  list(vertices = t(cube[["vb"]][-4L, ]), faces = t(cube[["ib"]]))
 
 # compute the intersection
 inter <- MeshesIntersection(list(mesh1, mesh2))
@@ -56,7 +54,7 @@ rglmesh1 <- toRGL(mesh1)
 rglinter <- toRGL(inter)
 open3d(windowRect = c(50, 50, 562, 562))
 shade3d(rglmesh1, color = "yellow", alpha = 0.2)
-shade3d(cube, color = "cyan", alpha = 0.2)
+shade3d(mesh2, color = "cyan", alpha = 0.2)
 shade3d(rglinter, color = "red")
 plotEdges(
   vertices = inter[["vertices"]], edges = inter[["exteriorEdges"]],
