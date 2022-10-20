@@ -13,3 +13,5 @@ NULL
 #' @aliases toRGL plotEdges
 #' @docType import
 NULL
+
+utils::globalVariables("exterior")

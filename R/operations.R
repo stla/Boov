@@ -100,7 +100,7 @@ MeshesIntersection <- function(
     is.matrixZQ(mesh[["vertices"]])
   }, logical(1L))
   gmp <- all(bigqMeshes)
-  if(!gmp || !all(!bigqMeshes)) {
+  if(!gmp && !all(!bigqMeshes)) {
     stop("Invalid set of meshes.")
   }
   checkMeshes <- lapply(meshes, function(mesh){
@@ -194,7 +194,7 @@ MeshesDifference <- function(
   stopifnot(is.list(mesh1), is.list(mesh2))
   bigqMeshes <- c(is.matrixZQ(mesh1), is.matrixZQ(mesh2))
   gmp <- all(bigqMeshes)
-  if(!gmp || !all(!bigqMeshes)) {
+  if(!gmp && !all(!bigqMeshes)) {
     stop("Invalid set of meshes.")
   }
   if(inherits(mesh1, "mesh3d")){
@@ -298,7 +298,7 @@ MeshesUnion <- function(
     is.matrixZQ(mesh[["vertices"]])
   }, logical(1L))
   gmp <- all(bigqMeshes)
-  if(!gmp || !all(!bigqMeshes)) {
+  if(!gmp && !all(!bigqMeshes)) {
     stop("Invalid set of meshes.")
   }
   checkMeshes <- lapply(meshes, function(mesh){
