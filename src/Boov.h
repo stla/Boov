@@ -22,6 +22,7 @@
 #include <CGAL/Cartesian.h>
 #include <CGAL/Gmpq.h>
 #include <CGAL/Gmpz.h>
+#include <CGAL/Polygon_mesh_processing/corefinement.h>
 #include "gmp.h"
 
 // -------------------------------------------------------------------------- //
