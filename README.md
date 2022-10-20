@@ -10,6 +10,8 @@ Boolean operations on volumes.
 
 ![](https://raw.githubusercontent.com/stla/MeshesOperations/master/inst/screenshots/Intersection.png)
 
+![](https://laustep.github.io/stlahblog/posts/figures/tetrahedraCompoundIntersection.gif)
+
 #### Difference
 
 ![](https://raw.githubusercontent.com/stla/MeshesOperations/master/inst/screenshots/Difference.png)
