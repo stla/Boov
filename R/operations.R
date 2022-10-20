@@ -29,8 +29,7 @@
 #' library(PolygonSoup)
 #' mesh1 <- Mesh(
 #'   mesh = truncatedIcosahedron,
-#'   triangulate = TRUE, normals = FALSE,
-#'   numbersType = "lazyExact"
+#'   triangulate = TRUE, normals = FALSE
 #' )
 #'
 #' # mesh two: a cube
