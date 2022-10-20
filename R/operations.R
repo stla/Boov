@@ -26,7 +26,7 @@
 #' library(rgl)
 #'
 #' # mesh one: truncated icosahedron; we triangulate it for plotting
-#' data(truncatedIcosahedron, package = "PolygonSoup")
+#' library(PolygonSoup)
 #' mesh1 <- Mesh(
 #'   mesh = truncatedIcosahedron,
 #'   triangulate = TRUE, normals = FALSE,
