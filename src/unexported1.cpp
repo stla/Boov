@@ -35,8 +35,6 @@ std::vector<PointT> matrix_to_points3(const Rcpp::NumericMatrix M) {
   return points;
 }
 
-template std::vector<Point3> matrix_to_points3<Point3>(
-    const Rcpp::NumericMatrix);
 template std::vector<EPoint3> matrix_to_points3<EPoint3>(
     const Rcpp::NumericMatrix);
 
