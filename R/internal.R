@@ -11,7 +11,7 @@ isBoolean <- function(x) {
 #' @noRd
 checkMesh <- function(vertices, faces, gmp, aslist) {
   if(gmp) {
-    if(!is.matrixZQ(vertices) || ncol(vertices) != 3L || is.bigq(vertices)) {
+    if(!is.matrixZQ(vertices) || ncol(vertices) != 3L || !is.bigq(vertices)) {
       stop("The `vertices` argument must be a `bigq` matrix with three columns.")
     }
     vertices <- as.character(vertices)
